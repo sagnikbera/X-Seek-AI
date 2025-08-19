@@ -1,5 +1,6 @@
 "use client";
 import { assets } from "@/assets/assets";
+import PromptBox from "@/components/PromptBox";
 import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
 import { useState } from "react";
@@ -13,7 +14,7 @@ export default function Home() {
     <div>
       <div className="flex h-screen">
         {/* sidebar  */}
-        <Sidebar expland={expland} setExpland={setExpland}/>
+        <Sidebar expland={expland} setExpland={setExpland} />
         {/* Body  */}
         <div className="flex-1 flex flex-col items-center justify-center px-4 pb-8 bg-[#292a2d] text-slate-300 relatives">
           <div className="md:hidden absolute px-4 top-6 flex items-center justify-between w-full">
@@ -34,18 +35,24 @@ export default function Home() {
             <>
               <div className="flex items-center gap-3">
                 <Image src={assets.logo} alt="logo" className="h-8 w-8" />
-                <p className="text-3xl font-bold text-slate-300 font-mono">Hi, I'm XSeek AI.</p>
+                <p className="text-3xl font-bold text-slate-300 font-mono">
+                  Hi, I'm XSeek AI.
+                </p>
               </div>
-              <p className="text-sm mt-2 font-mono">How can I help you today?</p>
+              <p className="text-sm mt-2 font-mono">
+                How can I help you today?
+              </p>
             </>
           ) : (
-            <div>
-
-            </div>
+            <div></div>
           )}
 
           {/* prombt box  */}
-          <p className="text-xs absolute bottom-1 text-gray-500">AI-generated , for reference only</p>
+          <PromptBox isLoading={isLoading} setisLoading={setisLoading} />
+          {/* footer  */}
+          <p className="text-xs absolute bottom-1 text-gray-500">
+            AI-generated , for reference only
+          </p>
         </div>
       </div>
     </div>
