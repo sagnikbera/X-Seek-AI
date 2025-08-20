@@ -19,3 +19,4 @@
 | **prismjs**         | A lightweight syntax highlighter for displaying code blocks with proper formatting and colors.                                                |
 | **react-hot-toast** | A notification/toast library for React apps — shows success/error/info messages in a sleek popup style.                                       |
 | **react-markdown**  | A React component to safely render and parse **Markdown** content (`# headings`, `**bold**`, `code blocks`, etc.) into HTML.                  |
+
