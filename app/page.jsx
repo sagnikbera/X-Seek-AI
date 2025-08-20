@@ -1,5 +1,6 @@
 "use client";
 import { assets } from "@/assets/assets";
+import Message from "@/components/Message";
 import PromptBox from "@/components/PromptBox";
 import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
@@ -34,17 +35,20 @@ export default function Home() {
           {messages.length === 0 ? (
             <>
               <div className="flex items-center gap-3">
-                <Image src={assets.logo} alt="logo" className="h-8 w-8" />
+                <Image src={assets.logo} alt="logo" className="h-12 w-12 p-1 border border-primary rounded-full" />
                 <p className="text-3xl font-bold text-slate-300 font-mono">
                   Hi, I'm XSeek AI.
                 </p>
               </div>
-              <p className="text-sm mt-2 font-mono">
+              <p className="mt-2 font-mono text-white/70">
                 How can I help you today?
               </p>
             </>
           ) : (
-            <div></div>
+            <div>
+              {/* message  */}
+              <Message role='user' content='Hellow sir' />
+            </div>
           )}
 
           {/* prombt box  */}
